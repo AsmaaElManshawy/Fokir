@@ -1,0 +1,748 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 60px 0;
+}   
+
+.section .container {
+    margin: auto;
+    padding: 15px 0 ;
+}
+
+h1,
+h2, 
+h3, 
+h4, 
+h5,
+h6 {
+    font-weight: 600;
+    margin: 0 0 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(51, 51, 51);
+}
+
+p,
+a,
+span,
+button {
+    font-family: Roboto, sans-serif;
+    color: rgb(85, 85, 85);
+    font-size: 16px;
+    font-weight:400;
+    font-style: normal ;
+    line-height: 25px;
+}
+
+ul {
+    list-style: none;
+    margin: 10px 0;
+    padding: 3px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* +++++++++++++++++    nav bar     finished    +++++++++++++++++++ */
+
+.nav {
+    font-family: Roboto ,sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.nav .content {
+    margin: auto;
+}
+
+
+.logo {
+    position: relative;
+    margin: 20px 0;
+}
+
+.logo button {
+    width: 40px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+
+}
+
+.logo button span {
+    display: block;
+    background-color: white;
+    border-radius: 1px;
+    width: 22px;
+    height: 2px;
+    margin-top: 4px;
+}
+
+.logo a {
+    height: 61px;
+    padding: 18px 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: rgb(255, 48, 91);
+}
+
+.links {
+    background-color: rgb(51,51,51);
+    opacity: 0;
+    text-align: center;
+    background-color: rgb(51, 51, 51) ;
+}
+
+.links:hover {
+    opacity: 1;
+}
+
+.links ul li {
+    margin: 16px 0;
+}
+
+.links ul li a {
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+.links ul li:first-child a {
+    color: rgb(255, 48, 91) ;
+}
+
+.links ul li a:hover {
+    color: rgb(255, 48, 91) ;
+}
+
+/*   +++++++++   section 1  Home     finished    +++++++++++++  */
+
+.section1 {
+    background-image: url(../image/header.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+
+}
+
+.section1 .content {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.section1 .content h3 {
+    color: white;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.section1 .content h1 {
+    color: rgb(255, 48, 91);
+    margin: 20px 0;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+}
+
+.section1 .content h4 {
+    color: white;
+    font-size: 18px;
+    line-height: 22px;
+    position: relative; 
+    transform: translate(30px);
+    animation: h4-move 2s linear 1s infinite alternate;
+    
+}
+
+.section1 h4 span {
+    color: white;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600px;
+}
+
+.section1 .content h4::after {
+    content: "";
+    width: 3px;
+    height: 27px;
+    background-color: white;
+    position: absolute;
+    right: 25%;
+    animation: after-move 2s linear 1s infinite alternate;
+}
+
+/*  ++++++++++++++++++++++ animation ++++++++++++++++++++++++  */
+
+.section1 h4 span.two {
+    opacity: 0;
+    position: relative;
+    left: -25%;
+    animation: see-span 8s linear 1s infinite alternate;
+}
+
+.section1 h4 span.one {
+    opacity: 1;
+    animation: hide-span 8s linear 1s infinite alternate;
+}
+
+@keyframes h4-move {
+    from {transform: translate(30px);}
+    to {transform: translate(80px);}
+}
+
+@keyframes after-move {
+    from {right: 25%;}
+    to {right: 49%;;}
+}
+
+@keyframes see-span {
+    25% {opacity: 0;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes hide-span {
+    25% {opacity: 0;}
+    75% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/*  +++++++++++++++++++    section 2  Hello  about         +++++++++++++++++++++++      */
+
+.section2 .image {
+    width: 420px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.section2 .image img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.about-icons {
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.563);
+    border-radius: 4px;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(110%);
+    transition: transform 0.5s ;
+}
+
+.about-icons i {
+    color: white;
+    font-size:20px
+    
+}
+
+.about-icons i:hover {
+    color: rgb(255, 48, 91);
+}
+
+.section2 .image:hover .about-icons {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.section2 .text {
+    width: 450px;
+    padding:0 15px;
+    margin: auto;
+    text-align: left;
+}
+
+.section2 .text h2 {
+    font-size: 34px;
+    line-height: 22px;
+    padding: 2px 7px ;
+    border-left: 4px solid rgb(255, 48, 91) ;
+}
+
+.section2 .text p{
+    margin-top: 25px;
+    
+}
+
+.section2 .info {
+    position: relative;
+    margin-top: 40px;
+}
+
+.info::before {
+    content: "";
+    width: 100%;
+    border: 1px dashed rgb(204, 204, 204);
+    position: absolute;
+    top: -20px;
+}
+
+.section2 ul li {
+    margin-bottom: 18px;
+}
+
+.info span {
+    color:rgb(51,51,51) ;
+    font-weight: 500;
+}
+
+.info ul li:last-child {
+    color: rgb(126,126,126) ;
+    margin-bottom: 20px;
+}
+
+.text a {
+    color: white ;
+    background-color: rgb(255, 48, 91);
+    padding: 10px 24px;
+    border-radius: 6px;
+    margin-right: 10px;
+}  
+
+.text a i {
+    margin-left: 5px;
+}
+
+.text a:hover {
+    background-color:rgb(236, 36, 3) ;
+    border-color: rgb(236, 36, 3);
+}
+
+/*      section 3  Our Services           */
+
+.section3 {
+    background-color: rgb(241, 241, 241);
+}
+
+.section .container .child-1 {
+    text-align: center;
+    position: relative;
+}
+
+.section3 .container .content {
+    margin-top: 60px ;
+    width: inherit;
+}
+
+.container .titel::before {
+    content: "";
+    width: 200px;
+    height: 1px;
+    background-color: rgb(245, 73, 107);
+    position: absolute;
+    top: 55px;
+    right: 25%;
+}
+
+.container .titel h2 {
+    position: relative;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 30px;
+}
+
+.container .titel h2::before {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: rgb(245, 73, 107);
+    position: absolute;
+    top: 50px;
+    right: 37%;
+}
+
+.container .titel h2::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: rgb(245, 73, 107);
+    position: absolute;
+    top: 60px;
+    right: 37%;
+}
+
+.section3 .content .child {
+    padding: 35px 25px;
+    transition: all 0.5s ease-in-out;
+}
+
+.section3 .content .child i {
+    font-size: 40px;
+    color: rgb(255, 48, 91);
+    margin-bottom: 10px;
+    transition: all 0.7s ease-in-out;
+}
+
+.section3 .content .child:hover i {
+    transform: scale(1.1);
+}
+
+.section3 .content .child h3 {
+    margin: 15px 0 15px;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.section3 .content .child:hover {
+    background-color: white;
+    transform: scale(1.06);
+}
+
+
+/*      section 4  Our Portfolio          */
+
+.section4 .buttons {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.buttons button {
+    background-color: white;
+    border: none;
+    padding: 3px 16px;
+    color: rgb(51,51,51);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.buttons button:focus {
+    color: red;
+}
+
+.buttons button:first-child {
+    color: red;
+}
+
+.section4 .content .child {
+    padding: 15px 0;
+    position: relative;
+    width: 450px;
+}
+
+.section4 .content .child a {
+    display: block;
+    width: 420px;
+    height: 314.1;
+    margin: auto;
+}
+
+.section4 .content .child a img {
+    width: 100%;
+
+}
+
+.child .layer {
+    opacity: 0;
+    height: 314.1;
+    width: 420px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.7s ;
+}
+
+.child .layer  i {
+    color: rgb(255, 48, 91);;
+    font-size: 18px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.section4 .child:hover .layer {
+    opacity: 1;
+}
+
+
+/*      section 5  info                   */
+
+.section5 {
+    background-color: rgb(241, 241, 241);
+}
+
+.section5 .container .child {
+    text-align: center;
+    margin: 30px 20px;
+}
+
+.section5 .child  i {
+    color: rgb(255, 48, 91);
+    font-size: 25px;
+}
+
+.section5 .container .child h3 {
+    color: rgb(51, 51, 51);
+    margin: 20px 0;
+    font-size: 26px;
+    line-height: 29px;
+    font-weight: 800;
+}
+
+.section5 .container .child h5 {
+    color: rgb(85, 85, 85);
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+
+/*      section 6  Client's Feedback      */
+
+.section6 {
+    background-color: white;
+}
+
+.section6 .container {
+    text-align: center;
+    position: relative;
+    height: 553px;
+}
+
+.section6 .container::before {
+    content: "";
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 48, 91);
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+    cursor: pointer;
+}
+
+.section6 .container::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin-left: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 48, 91);
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+    cursor: pointer;
+}
+
+.section6 .content::before {
+    content: "";
+    width: 380px ;
+    height: 380px;
+    background-color: rgb(255, 48, 91);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -190px;
+    left: -280px;
+}
+
+.section6 .content {
+    background-color: rgb(241, 241, 241);
+    color: rgb(85, 85, 85);
+    padding: 20px;
+    width: 420px;
+    height: 413px;
+    margin: 70px auto 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section6 .image img {
+    border-radius: 50%;
+    position: relative;
+    top: -20px;
+    z-index: 2;
+} 
+
+.section6 .text {
+    text-align: left;
+    margin-left: 25px;
+}
+
+.section6 .text h4 {
+    margin: 10px 0 ;
+}
+
+.section6 .text h4 a {
+    background-color: transparent;
+    color: rgb(85, 85, 85);
+    padding: 0;
+    border-radius: 0;
+    margin-right: 0;
+}
+
+.section6 .content .text h4 i {
+    font-size: 15px;
+    color: rgb(85, 85, 85);
+}
+
+.section6 .text p {
+    font-style: italic;
+}
+
+.section6 .content .text i {
+    color: rgb(241, 195, 13);
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+/*      section 7  Our Blog               */
+
+.section7 {
+    background-color: rgb(241, 241, 241) ;
+}
+
+.section7 .container {
+    text-align: center;
+}
+
+.section7 .content {
+    padding: 40px;
+    margin:auto ;
+}
+
+.section7 .content .child {
+    margin-top: 40px;
+    text-align: left;
+    background-color: white;
+}
+
+.section7 .child .text {
+    padding: 20px;
+}
+
+.section7 .text p {
+    margin: 10px 0;
+}
+
+.section7 .child a {
+    color: rgb(51, 51, 51);
+    font-weight: 400;
+    font-size: 14px;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin-right: 0;
+}
+
+.section7 .child a.one {
+    color: rgb(51, 51, 51);
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.section7 .child a:hover {
+    color: red;
+}
+
+.section7 .child img {
+    width: 100%;
+}
+
+
+/*      section 8  Contact Us             */
+
+.section8 .container {
+    text-align: center;
+}
+
+.section8 .content {
+    padding: 20px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.section8 .content .form-e {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    padding-left: 10px;
+    
+}
+
+.section8 .content .form-e:focus {
+    border-color: red;
+} 
+
+.section8 .content textarea.form-e {
+    height: 100px;
+    resize: none;
+}
+
+.section8 .content button {
+    border: 0;
+    padding: 20px;
+    margin-top: 60px;
+    background-color: rgb(255, 48, 91);
+    color: white;
+    border-radius: 10px;
+}
+
+.section8 .content button:hover {
+    cursor: not-allowed;
+    background-color: rgb(236, 36, 3);
+}
+
+
+/*      section 9  footer                 */
+
+.section9 {
+    background-color: #333;
+}
+
+.section9 .container {
+    width: 450px;
+    height: 65px;
+    color: white;
+    text-align: center;
+}
+.section9 .container p {
+    color: white;
+}
+
+.section9  a {
+    color: red;
+}
+
+.section9 .about-icons {
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    background-color: #333;
+    border-radius: 0;
+    position: relative;
+    transform: translateY(0);
+}
